@@ -27,9 +27,28 @@ make recover
 ./recover card.raw
 ```
 
-
 ## Inheritance
-
+Inheritance simulates the inheritance of blood types for each member of a family.
+As known, a person’s blood type is determined by two alleles (i.e., different forms of a gene). The child should have two alleles, one from each parent. The parents should each have two alleles, one from each of their parents.
+The program creates a family of a specified generation size and assigns blood type alleles to each family member. The oldest generation will have alleles assigned randomly to them.
+For example, in the example below, the child in Generation 0 received an O allele from both Generation 1 parents. The first parent received an A from the first grandparent and a O from the second grandparent. Similarly, the second parent received an O and a B from their grandparents.
+```bash
+./inheritance
+Generation 0, blood type OO
+    Generation 1, blood type AO
+        Generation 2, blood type OA
+        Generation 2, blood type BO
+    Generation 1, blood type OB
+        Generation 2, blood type AO
+        Generation 2, blood type BO
+```
+#### Usage
+Compile the file and run the program:
+```bash
+cd inheritance
+make inheritance
+./inheritance
+```
 
 ## Readability
 Readability figures out what the reading level of a text is. For example:
