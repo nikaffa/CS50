@@ -11,6 +11,7 @@ $ ./caesar 1
 plaintext:  HELLO
 ciphertext: IFMMP
 ```
+
 ## Speller (an assignment on Data Structures - Hash Tables)
 Speller is a program that spell-checks a file using a dictionary of words. The algorithm designed as a hash table. Along with the spell-checking it's also benchmarking (i.e., timing the execution of) the program implementation in order to study time complexity.
 The challenge of this assignment was to implement the program as efficiently as possible using a hash table in such a way that TIME IN load, TIME IN check, TIME IN size, and TIME IN unload are all minimized. 
@@ -54,6 +55,7 @@ You can find my statistics in **`student.txt`** and the CS50 staff's statistics 
 Tou can then compare your results with mine in the same window, as with the below:
 **`diff -y result.txt student.txt`**
 
+
 ## Inheritance (an assignment on Data Structures - Linked List, and recursion)
 Inheritance is a program on C that simulates the inheritance of blood types for each member of a family.
 As known, a person’s blood type is determined by two alleles (i.e., different forms of a gene). The child should have two alleles, one from each parent. The parents should each have two alleles, one from each of their parents.
@@ -77,8 +79,9 @@ make inheritance
 ./inheritance
 ```
 
+
 ## Filter (an assignment on Memory and Memory Allocation)
-["Find it here "]()
+["Find it here "](https://github.com/nikaffa/Projects-on-C/tree/master/filter)
 
 ## Recover (an assignment on Memory and Memory Allocation)
 Recover is a program on C that recovers JPEGs from a forensic image stored in a file called  **`card.raw`**.
