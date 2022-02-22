@@ -4,7 +4,7 @@ The program applies filters to BMPs, a file format that supports “24-bit color
 The algorithm filters an image by taking the pixels of some original image and modifying each pixel in such a way that a particular effect is apparent in the resulting image.
 
 #### Usage
-Try compling by run **`make filter`** 
+Compile file by run **`make filter`** 
 Filter images from **`images`** directory. 
 Original image:
 
