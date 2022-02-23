@@ -59,8 +59,10 @@ Tou can then compare your results with mine in the same window, as with the belo
 ## Inheritance (an assignment on Data Structures - Linked List, and recursion)
 Inheritance is a program on C that simulates the inheritance of blood types for each member of a family.
 As known, a person’s blood type is determined by two alleles (i.e., different forms of a gene). The child should have two alleles, one from each parent. The parents should each have two alleles, one from each of their parents.
+
 The program creates a family of a specified generation size and assigns blood type alleles to each family member. The oldest generation will have alleles assigned randomly to them.
-For example, in the example below, the child in Generation 0 received an O allele from both Generation 1 parents. The first parent received an A from the first grandparent and a O from the second grandparent. Similarly, the second parent received an O and a B from their grandparents.
+
+In the example below, the child in Generation 0 received an O allele from both Generation 1 parents. The first parent received an A from the first grandparent and a O from the second grandparent. Similarly, the second parent received an O and a B from their grandparents.
 ```bash
 ./inheritance
 Generation 0, blood type OO
@@ -83,6 +85,7 @@ make inheritance
 ## Filter (an assignment on Memory and Memory Allocation)
 ["Find it here "](https://github.com/nikaffa/Projects-on-C/tree/master/filter)
 
+
 ## Recover (an assignment on Memory and Memory Allocation)
 Recover is a program on C that recovers JPEGs from a forensic image stored in a file called  **`card.raw`**.
 Aftre running the program you should ultimately find that the image contains 50 JPEGs.
@@ -95,3 +98,50 @@ make recover
 ./recover card.raw
 ```
 
+## Runoff (an assignment on Algorithms)
+Runoff is a program that runs a runoff election, using ranked-choice voting algorithm.
+
+In a ranked-choice system, voters can vote for more than one candidate. Instead of just voting for their top choice, they can rank the candidates in order of preference.
+So each voter, in addition to specifying their first preference candidate, has also indicated their second and third choices:
+```bash
+BALLOT
+1.Alice
+2.Bob
+3.Charie
+```
+Voters can rank as many candidates as they wish. If any candidate has a majority (more than 50%) of the first preference votes, that candidate is declared the winner of the election. If no candidate has more than 50% of the vote, then an “instant runoff” occurrs. The candidate who received the fewest number of votes is eliminated from the election, and anyone who originally chose that candidate as their first preference now has their second preference considered.
+
+The process repeats: if no candidate has a majority of the votes, the last place candidate is eliminated, and anyone who voted for them will instead vote for their next preference (who hasn’t themselves already been eliminated). Once a candidate has a majority, that candidate is declared the winner.
+
+#### Usage
+Compile the file and run the program by specifying the names of the candidates:
+```bash
+cd runoff
+make runoff
+./runoff Alice Bob Charlie
+```
+The program should run a runoff election and output the winner, per the below:
+```bash
+Number of voters: 5
+Rank 1: Alice
+Rank 2: Bob
+Rank 3: Charlie
+
+Rank 1: Alice
+Rank 2: Charlie
+Rank 3: Bob
+
+Rank 1: Bob
+Rank 2: Charlie
+Rank 3: Alice
+
+Rank 1: Bob
+Rank 2: Alice
+Rank 3: Charlie
+
+Rank 1: Charlie
+Rank 2: Alice
+Rank 3: Bob
+
+Alice
+```
